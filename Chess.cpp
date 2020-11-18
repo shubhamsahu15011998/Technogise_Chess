@@ -296,22 +296,3 @@ int main()
 
     return 0;
 }
-/*
-#include <iostream>
-using namespace std;
-class MyBaseClass {
-   public:
-   MyBaseClass(int x) {
-      cout << "Constructor of base class: " << x << endl;
-   }
-};
-class MyDerivedClass : public MyBaseClass { //base constructor as initializer list
-   public:
-      MyDerivedClass(int x, int y) : MyBaseClass(x) {
-         cout << "Constructor of derived class: " << y << endl;
-      }
-};
-int main() {
-   MyDerivedClass derived(100,50);
-}
-*/
