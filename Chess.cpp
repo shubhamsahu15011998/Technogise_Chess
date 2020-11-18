@@ -7,10 +7,12 @@ protected:
     string pos;
 public:
     chess(string s)
-    {   pos=s;  }
+    {pos=s;}
     virtual void move_()
     {}
 };
+
+
 class king : public chess
 {
 public:
@@ -37,6 +39,7 @@ public:
     }
 };
 
+
 class queen : public chess
 {
 public:
@@ -46,7 +49,7 @@ public:
         long i=1;
         while(i)
         {
-            if(pos[0]-i>='A' && pos[0]-i<='H'&& pos[1]-i>'0' && pos[1]-i<'9')
+            if(pos[0]-i>='A' && pos[0]-i<='H' && pos[1]-i>'0' && pos[1]-i<'9')
             {
                 cout<<(char)(pos[0]-i)<<(char)(pos[1]-i)<<" ";
                 i++;
@@ -56,7 +59,7 @@ public:
         i=1;
         while(i)
         {
-            if(pos[0]+i>='A' && pos[0]+i<='H'&& pos[1]+i>'0' && pos[1]+i<'9')
+            if(pos[0]+i>='A' && pos[0]+i<='H' && pos[1]+i>'0' && pos[1]+i<'9')
             {
                 cout<<(char)(pos[0]+i)<<(char)(pos[1]+i)<<" ";
                 i++;
@@ -66,7 +69,7 @@ public:
         i=1;
         while(i)
         {
-            if(pos[0]+i>='A' && pos[0]+i<='H'&& pos[1]-i>'0' && pos[1]-i<'9')
+            if(pos[0]+i>='A' && pos[0]+i<='H' && pos[1]-i>'0' && pos[1]-i<'9')
             {
                 cout<<(char)(pos[0]+i)<<(char)(pos[1]-i)<<" ";
                 i++;
@@ -76,7 +79,7 @@ public:
         i=1;
         while(i)
         {
-            if(pos[0]-i>='A' && pos[0]-i<='H'&& pos[1]+i>'0' && pos[1]+i<'9')
+            if(pos[0]-i>='A' && pos[0]-i<='H' && pos[1]+i>'0' && pos[1]+i<'9')
             {
                 cout<<(char)(pos[0]-i)<<(char)(pos[1]+i)<<" ";
                 i++;
@@ -86,7 +89,7 @@ public:
         i=1;
         while(i)
         {
-            if(pos[0]>='A' && pos[0]<='H'&& pos[1]+i>'0' && pos[1]+i<'9')
+            if(pos[0]>='A' && pos[0]<='H' && pos[1]+i>'0' && pos[1]+i<'9')
             {
                 cout<<(char)(pos[0])<<(char)(pos[1]+i)<<" ";
                 i++;
@@ -96,7 +99,7 @@ public:
         i=1;
         while(i)
         {
-            if(pos[0]>='A' && pos[0]<='H'&& pos[1]-i>'0' && pos[1]-i<'9')
+            if(pos[0]>='A' && pos[0]<='H' && pos[1]-i>'0' && pos[1]-i<'9')
             {
                 cout<<(char)(pos[0])<<(char)(pos[1]-i)<<" ";
                 i++;
@@ -106,7 +109,7 @@ public:
         i=1;
         while(i)
         {
-            if(pos[0]+i>='A' && pos[0]+i<='H'&& pos[1]>'0' && pos[1]<'9')
+            if(pos[0]+i>='A' && pos[0]+i<='H' && pos[1]>'0' && pos[1]<'9')
             {
                 cout<<(char)(pos[0]+i)<<(char)(pos[1])<<" ";
                 i++;
@@ -116,7 +119,7 @@ public:
         i=1;
         while(i)
         {
-            if(pos[0]-i>='A' && pos[0]-i<='H'&& pos[1]>'0' && pos[1]<'9')
+            if(pos[0]-i>='A' && pos[0]-i<='H' && pos[1]>'0' && pos[1]<'9')
             {
                 cout<<(char)(pos[0]-i)<<(char)(pos[1])<<" ";
                 i++;
@@ -125,6 +128,7 @@ public:
         }
     }
 };
+
 
 class bishop : public chess
 {
@@ -135,7 +139,7 @@ public:
         long i=1;
         while(i)
         {
-            if(pos[0]-i>='A' && pos[0]-i<='H'&& pos[1]-i>'0' && pos[1]-i<'9')
+            if(pos[0]-i>='A' && pos[0]-i<='H' && pos[1]-i>'0' && pos[1]-i<'9')
             {
                 cout<<(char)(pos[0]-i)<<(char)(pos[1]-i)<<" ";
                 i++;
@@ -145,7 +149,7 @@ public:
         i=1;
         while(i)
         {
-            if(pos[0]+i>='A' && pos[0]+i<='H'&& pos[1]+i>'0' && pos[1]+i<'9')
+            if(pos[0]+i>='A' && pos[0]+i<='H' && pos[1]+i>'0' && pos[1]+i<'9')
             {
                 cout<<(char)(pos[0]+i)<<(char)(pos[1]+i)<<" ";
                 i++;
@@ -155,7 +159,7 @@ public:
         i=1;
         while(i)
         {
-            if(pos[0]+i>='A' && pos[0]+i<='H'&& pos[1]-i>'0' && pos[1]-i<'9')
+            if(pos[0]+i>='A' && pos[0]+i<='H' && pos[1]-i>'0' && pos[1]-i<'9')
             {
                 cout<<(char)(pos[0]+i)<<(char)(pos[1]-i)<<" ";
                 i++;
@@ -165,7 +169,7 @@ public:
         i=1;
         while(i)
         {
-            if(pos[0]-i>='A' && pos[0]-i<='H'&& pos[1]+i>'0' && pos[1]+i<'9')
+            if(pos[0]-i>='A' && pos[0]-i<='H' && pos[1]+i>'0' && pos[1]+i<'9')
             {
                 cout<<(char)(pos[0]-i)<<(char)(pos[1]+i)<<" ";
                 i++;
@@ -175,30 +179,32 @@ public:
     }
 };
 
+
 class horse : public chess
 {
 public:
     horse(string s): chess(s) {}
     void move_()
     {
-        if(pos[0]+2>='A' && pos[0]+2<='H'&& pos[1]+1>'0' && pos[1]+1<'9')
+        if(pos[0]+2>='A' && pos[0]+2<='H' && pos[1]+1>'0' && pos[1]+1<'9')
             cout<<(char)(pos[0]+2)<<(char)(pos[1]+1)<<" ";
-        if(pos[0]+2>='A' && pos[0]+2<='H'&& pos[1]-1>'0' && pos[1]-1<'9')
+        if(pos[0]+2>='A' && pos[0]+2<='H' && pos[1]-1>'0' && pos[1]-1<'9')
             cout<<(char)(pos[0]+2)<<(char)(pos[1]-1)<<" ";
-        if(pos[0]+1>='A' && pos[0]+1<='H'&& pos[1]+2>'0' && pos[1]+2<'9')
+        if(pos[0]+1>='A' && pos[0]+1<='H' && pos[1]+2>'0' && pos[1]+2<'9')
             cout<<(char)(pos[0]+1)<<(char)(pos[1]+2)<<" ";
-        if(pos[0]+1>='A' && pos[0]+1<='H'&& pos[1]-2>'0' && pos[1]-2<'9')
+        if(pos[0]+1>='A' && pos[0]+1<='H' && pos[1]-2>'0' && pos[1]-2<'9')
             cout<<(char)(pos[0]+1)<<(char)(pos[1]-2)<<" ";
-        if(pos[0]-2>='A' && pos[0]-2<='H'&& pos[1]+1>'0' && pos[1]+1<'9')
+        if(pos[0]-2>='A' && pos[0]-2<='H' && pos[1]+1>'0' && pos[1]+1<'9')
             cout<<(char)(pos[0]-2)<<(char)(pos[1]+1)<<" ";
-        if(pos[0]-2>='A' && pos[0]-2<='H'&& pos[1]-1>'0' && pos[1]-1<'9')
+        if(pos[0]-2>='A' && pos[0]-2<='H' && pos[1]-1>'0' && pos[1]-1<'9')
             cout<<(char)(pos[0]-2)<<(char)(pos[1]-1)<<" ";
-        if(pos[0]-1>='A' && pos[0]-1<='H'&& pos[1]+2>'0' && pos[1]+2<'9')
+        if(pos[0]-1>='A' && pos[0]-1<='H' && pos[1]+2>'0' && pos[1]+2<'9')
             cout<<(char)(pos[0]-1)<<(char)(pos[1]+2)<<" ";
-        if(pos[0]-1>='A' && pos[0]-1<='H'&& pos[1]-2>'0' && pos[1]-2<'9')
+        if(pos[0]-1>='A' && pos[0]-1<='H' && pos[1]-2>'0' && pos[1]-2<'9')
             cout<<(char)(pos[0]-1)<<(char)(pos[1]-2)<<" ";
     }
 };
+
 
 class rook : public chess
 {
@@ -209,7 +215,7 @@ public:
         long i=1;
         while(i)
         {
-            if(pos[0]>='A' && pos[0]<='H'&& pos[1]-i>'0' && pos[1]-i<'9')
+            if(pos[0]>='A' && pos[0]<='H' && pos[1]-i>'0' && pos[1]-i<'9')
             {
                 cout<<(char)(pos[0])<<(char)(pos[1]-i)<<" ";
                 i++;
@@ -219,7 +225,7 @@ public:
         i=1;
         while(i)
         {
-            if(pos[0]>='A' && pos[0]<='H'&& pos[1]+i>'0' && pos[1]+i<'9')
+            if(pos[0]>='A' && pos[0]<='H' && pos[1]+i>'0' && pos[1]+i<'9')
             {
                 cout<<(char)(pos[0])<<(char)(pos[1]+i)<<" ";
                 i++;
@@ -229,7 +235,7 @@ public:
         i=1;
         while(i)
         {
-            if(pos[0]+i>='A' && pos[0]+i<='H'&& pos[1]>'0' && pos[1]<'9')
+            if(pos[0]+i>='A' && pos[0]+i<='H' && pos[1]>'0' && pos[1]<'9')
             {
                 cout<<(char)(pos[0]+i)<<(char)(pos[1])<<" ";
                 i++;
@@ -239,7 +245,7 @@ public:
         i=1;
         while(i)
         {
-            if(pos[0]-i>='A' && pos[0]-i<='H'&& pos[1]>'0' && pos[1]<'9')
+            if(pos[0]-i>='A' && pos[0]-i<='H' && pos[1]>'0' && pos[1]<'9')
             {
                 cout<<(char)(pos[0]-i)<<(char)(pos[1])<<" ";
                 i++;
@@ -248,6 +254,7 @@ public:
         }
     }
 };
+
 
 class pawn : public chess
 {
@@ -259,40 +266,44 @@ public:
             cout<<(char)(pos[0]+1)<<(char)(pos[1])<<" ";
     }
 };
+
+
 int main()
 {
     string s1,s2;
     cin>>s1>>s2;
+    chess *obj;
     if(s1=="King")
     {
-        chess *obj = new king(s2);
+        obj = new king(s2);
         obj->move_();
     }
     else if(s1=="Queen")
     {
-        chess *obj = new queen(s2);
+        obj = new queen(s2);
         obj->move_();
     }
     else if(s1=="Bishop")
     {
-        chess *obj = new bishop(s2);
+        obj = new bishop(s2);
         obj->move_();
     }
     else if(s1=="Horse")
     {
-        chess *obj = new horse(s2);
+        obj = new horse(s2);
         obj->move_();
     }
     else if(s1=="Rook")
     {
-        chess *obj = new rook(s2);
+        obj = new rook(s2);
         obj->move_();
     }
     else if(s1=="Pawn")
     {
-        chess *obj = new pawn(s2);
+        obj = new pawn(s2);
         obj->move_();
     }
 
     return 0;
 }
+
