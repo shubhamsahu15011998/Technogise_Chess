@@ -125,21 +125,21 @@ public:
     void horse_move(char row, char column)
     {
         if(validate_move( (char)(row+2), (char)(column+1) ))
-            cout<<row<<column<<" ";
+            cout<<(char)(row+2)<<(char)(column+1)<<" ";
         if(validate_move( (char)(row+2), (char)(column-1) ))
-            cout<<row<<column<<" ";
+            cout<<(char)(row+2)<<(char)(column-1)<<" ";
         if(validate_move( (char)(row-2), (char)(column+1) ))
-            cout<<row<<column<<" ";
+            cout<<(char)(row-2)<<(char)(column+1)<<" ";
         if(validate_move( (char)(row-2), (char)(column-1) ))
-            cout<<row<<column<<" ";
+            cout<<(char)(row-2)<<(char)(column-1)<<" ";
         if(validate_move( (char)(row+1), (char)(column+2) ))
-            cout<<row<<column<<" ";
+            cout<<(char)(row+1)<<(char)(column+2)<<" ";
         if(validate_move( (char)(row+1), (char)(column-2) ))
-            cout<<row<<column<<" ";
+            cout<<(char)(row+1)<<(char)(column-2)<<" ";
         if(validate_move( (char)(row-1), (char)(column+2) ))
-            cout<<row<<column<<" ";
+            cout<<(char)(row-1)<<(char)(column+2)<<" ";
         if(validate_move( (char)(row-1), (char)(column-2) ))
-            cout<<row<<column<<" ";
+            cout<<(char)(row-1)<<(char)(column-2)<<" ";
     }
 
 };
